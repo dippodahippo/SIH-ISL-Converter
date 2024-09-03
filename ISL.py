@@ -38,8 +38,8 @@ def comp_angles(a1, a2, marg=10, th=0.8):
 #these are image paths (this is a non CNN approach, so we can use N images per pose, just gotta give the
 #same values - i love dictionaries)
 img_text = {
-    '/dataset/i love you.jpg': 'I Love You',
-    '/dataset/hello.jpg': 'Hello'
+    '/dataset/I love you.jpg': 'I Love You',
+    '/dataset/Hello.jpg': 'Hello'
 }
 
 ref_data = {} #this is like buffer memory- stores angles temporarily before being displayed
