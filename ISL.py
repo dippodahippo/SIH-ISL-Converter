@@ -2,7 +2,7 @@ import cv2
 import mediapipe as mp
 import numpy as np
 
-#this shit defines the functionalities of hand detection, mediapipe is de god
+#this defines the functionalities of hand detection, mediapipe is de god
 mph = mp.solutions.hands
 hands = mph.Hands(static_image_mode=False, max_num_hands=1, min_detection_confidence=0.5)
 mpd = mp.solutions.drawing_utils
@@ -82,7 +82,7 @@ while cap.isOpened():
                     break
 
             if not matched:
-                cv2.putText(img_bgr, "no match seen", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2, cv2.LINE_AA) #if a hand is seen but no valid pose, then return ille
+                cv2.putText(img_bgr, "no match seen", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2, cv2.LINE_AA) #if a hand is seen but no valid pose (from the dataset), display so
     
     cv2.imshow('ISL Detection', img_bgr)
     if cv2.waitKey(5) & 0xFF == ord('m'): #press m to bye bye
